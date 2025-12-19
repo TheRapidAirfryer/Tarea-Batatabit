@@ -1,0 +1,28 @@
+:root {
+    /* Colores de la marca */
+    --primary-color: #F7931A;
+    --secondary-color: #FFE9D4;
+
+    /* Colores de texto */
+    --text-primary: #201E1C;
+    --text-secondary: #282623;
+    --text-tertiary: #757575;
+    --text-cuaternary: #B5B0AC;
+    --text-quaternary: #808080;
+
+    /* Colores de fondo */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FAF8F7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* tranformamos a base de 10px para utilizar 1rem = 10px */
+    font-family: 'DM Sans', sans-serif;
+}
