@@ -1,71 +1,224 @@
 header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Centrar horizontalmente */
-    justify-content: center;
-    /* Centrar verticalmente */
-    width: 100%;
-    min-width: 32rem;
-    height: 33rem;
-    text-align: center;
-    background: linear-gradient(207.8deg, var(--text-primary) 16%, var(--primary-color) 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centrar horizontalmente */
+  justify-content: center;
+  /* Centrar verticalmente */
+  width: 100%;
+  min-width: 32rem;
+  height: 33rem;
+  text-align: center;
+  background: linear-gradient(
+    207.8deg,
+    var(--text-primary) 16%,
+    var(--primary-color) 100%
+  );
 }
 
 .header__title-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 900px;
-    min-width: 288px;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  min-width: 288px;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
-    .header__title-container {
-        width: 80%;
-    }
+  .header__title-container {
+    width: 80%;
+  }
 }
 
 main {
-    width: 100%;
-    min-width: 320px;
-    height: auto;
-    background-color: var(--bg-secondary);
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  background-color: var(--bg-secondary);
 }
 
 .exchange {
-    width: 100%;
-    height: auto;
-    padding-top: 80px;
-    padding-bottom: 40px;
-    text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 .benefits {
-    width: 100%;
-    height: auto;
-    padding-top: 80px;
-    padding-bottom: 40px;
-    background-color: var(--text-primary);
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background-color: var(--text-primary);
 }
 
 .bitcoin__img-container {
-    width: 100%;
-    height: 50vh;
-    background-image: url('https://res.cloudinary.com/cflores/image/upload/v1765639574/mobile-firts/bitcoinbaby_kbogfv.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+  background-image: url("https://res.cloudinary.com/cflores/image/upload/v1765639574/mobile-firts/bitcoinbaby_kbogfv.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .plans {
-    width: 100%;
-    height: auto;
-    padding-top: 80px;
-    padding-bottom: 40px;
-    /* padding: 80px 0 40px; */
-    text-align: center;
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  /* padding: 80px 0 40px; */
+  text-align: center;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .benefits__content {
+    width: 80%;
+  }
+
+  .benefits__title {
+    font-size: 3rem;
+  }
+
+  .benefits__description {
+    font-size: 1.6rem;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  .benefits__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .benefits__title {
+    font-size: 3.4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1366px) {
+  .benefits__content {
+    max-width: 1200px;
+  }
+}
+
+.bitcoin__img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .bitcoin__img-container {
+    height: 60vh;
+  }
+
+  .bitcoin__img-container h2 {
+    font-size: 3rem;
+  }
+
+  .plans__slider-container {
+    justify-content: center;
+  }
+
+  .plan__card {
+    min-width: 260px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  .bitcoin__img-container {
+    height: 70vh;
+  }
+
+  .bitcoin__img-container h2 {
+    font-size: 3.6rem;
+  }
+
+  .plans__slider-container {
+    overflow-x: visible;
+  }
+
+  .plan__card {
+    min-width: 280px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1366px) {
+  .bitcoin__img-container h2 {
+    font-size: 4rem;
+  }
+}
+
+.footer {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  padding: 40px 0;
+}
+
+.footer__content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__brand img {
+  width: 140px;
+  margin-bottom: 15px;
+}
+
+.footer__brand p {
+  font-size: 1.4rem;
+  color: var(--text-quaternary);
+}
+
+.footer__links h4,
+.footer__social h4 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.footer__links ul,
+.footer__social ul {
+  list-style: none;
+}
+
+.footer__links li,
+.footer__social li {
+  margin-bottom: 8px;
+}
+
+.footer__links a,
+.footer__social a {
+  color: var(--text-quaternary);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.plans__slider-container {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 3rem 2rem 2rem;
+  scroll-snap-type: x proximity;
+}
+
+.plans__slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+.plan__card {
+  position: relative;
+  min-width: 240px;
 }
